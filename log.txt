@@ -1,0 +1,2 @@
+03/10/2025 08:39:37 AM - INFO - Inicio do programa
+03/10/2025 08:39:37 AM - INFO - Final do programa
