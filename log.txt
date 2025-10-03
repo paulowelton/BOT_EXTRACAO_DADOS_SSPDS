@@ -1,2 +1,3 @@
-03/10/2025 08:39:37 AM - INFO - Inicio do programa
-03/10/2025 08:39:37 AM - INFO - Final do programa
+03/10/2025 12:11:53 PM - INFO - Inicio do programa
+03/10/2025 12:11:53 PM - INFO - Entrando no sspds
+03/10/2025 12:12:04 PM - INFO - Final do programa

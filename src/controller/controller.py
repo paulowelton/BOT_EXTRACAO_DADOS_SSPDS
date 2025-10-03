@@ -1,6 +1,8 @@
 import traceback
 import logging as log
 
+from src.model.baixar_relatorios import baixar_relatorios
+
 # limpando o log
 with open("log.txt", "w") as file:
     pass
@@ -14,8 +16,8 @@ log.basicConfig(filename="log.txt",
 try:
     log.info("Inicio do programa")
     print("Inicio do programa")
-
     
+    baixar_relatorios()
     
 except:
     msg_erro = traceback.format_exc()
