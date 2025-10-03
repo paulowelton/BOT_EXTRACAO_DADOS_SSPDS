@@ -1,0 +1,3 @@
+relatorios = [
+    'FURTO'
+]

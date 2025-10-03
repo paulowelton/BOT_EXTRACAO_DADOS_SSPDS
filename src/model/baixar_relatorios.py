@@ -8,9 +8,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
 import os
 
-relatorios = [
-    'FURTO'
-]
+# array com todos os relatorios a ser baixado
+from list_relatorios import relatorios
 
 def baixar_relatorios():
     try:

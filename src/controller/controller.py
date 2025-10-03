@@ -2,6 +2,7 @@ import traceback
 import logging as log
 
 from src.model.baixar_relatorios import baixar_relatorios
+from src.model.transformar_relatorios_em_dataframes import transformar_relatorios_em_dataframes
 
 # limpando o log
 with open("log.txt", "w") as file:
@@ -18,6 +19,8 @@ try:
     print("Inicio do programa")
     
     baixar_relatorios()
+    
+    transformar_relatorios_em_dataframes()
     
 except:
     msg_erro = traceback.format_exc()
