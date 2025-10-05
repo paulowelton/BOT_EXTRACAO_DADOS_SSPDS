@@ -8,10 +8,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
 import os
 
-# array com todos os relatorios a ser baixado
-from list_relatorios import relatorios
-
-def baixar_relatorios():
+def baixar_relatorios(relatorio):
     try:
         log.info("Entrando no sspds")
         print("Entrando no sspds")
@@ -31,7 +28,7 @@ def baixar_relatorios():
             
             titulo = btn_relatorio.find_element(By.TAG_NAME, 'h3').text
             
-            if titulo in relatorios:
+            if titulo == relatorio:
                 btn_relatorio.click()
                 
                 while True:
