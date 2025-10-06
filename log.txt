@@ -1,6 +1,30 @@
-05/10/2025 05:00:45 PM - INFO - Inicio do programa
-05/10/2025 05:00:45 PM - INFO - Entrando no sspds
-05/10/2025 05:00:48 PM - INFO - Transformando relatorio de FURTO em dataframe
-05/10/2025 05:01:22 PM - INFO - atualizando planilha online
-05/10/2025 05:02:01 PM - INFO - planilha online atualizada
-05/10/2025 05:02:01 PM - INFO - Final do programa
+05/10/2025 10:53:15 PM - INFO - Inicio do programa
+05/10/2025 10:53:15 PM - INFO - Entrando no sspds
+05/10/2025 10:53:19 PM - INFO - Transformando relatorio de FURTOCRIMES SEXUAIS em dataframe
+05/10/2025 10:53:19 PM - ERROR - Houve um erro na funcao de transformar relatorios em dfs: Traceback (most recent call last):
+  File "c:\Users\paulo\Documents\GitHub\BOT_EXTRACAO_DADOS_SSPDS\src\model\transformar_relatorios_em_dataframes.py", line 22, in transformar_relatorios_em_dataframes
+    dataframe = pd.read_excel(arquivo_xlsx)
+  File "C:\Users\paulo\AppData\Roaming\Python\Python313\site-packages\pandas\io\excel\_base.py", line 495, in read_excel
+    io = ExcelFile(
+        io,
+    ...<2 lines>...
+        engine_kwargs=engine_kwargs,
+    )
+  File "C:\Users\paulo\AppData\Roaming\Python\Python313\site-packages\pandas\io\excel\_base.py", line 1550, in __init__
+    ext = inspect_excel_format(
+        content_or_path=path_or_buffer, storage_options=storage_options
+    )
+  File "C:\Users\paulo\AppData\Roaming\Python\Python313\site-packages\pandas\io\excel\_base.py", line 1402, in inspect_excel_format
+    with get_handle(
+         ~~~~~~~~~~^
+        content_or_path, "rb", storage_options=storage_options, is_text=False
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as handle:
+    ^
+  File "C:\Users\paulo\AppData\Roaming\Python\Python313\site-packages\pandas\io\common.py", line 882, in get_handle
+    handle = open(handle, ioargs.mode)
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\paulo\\Downloads\\Furtocrimes sexuais_2009-a-2024.xlsx'
+
+05/10/2025 10:53:19 PM - INFO - atualizando planilha online
+05/10/2025 10:54:12 PM - INFO - planilha online atualizada
+05/10/2025 10:54:12 PM - INFO - Final do programa

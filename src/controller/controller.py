@@ -1,11 +1,11 @@
-import os
 import traceback
-import pandas as pd
 import logging as log
+from selenium import webdriver
 
 from src.model.baixar_relatorios import baixar_relatorios
 from src.model.transformar_relatorios_em_dataframes import transformar_relatorios_em_dataframes
 from src.model.atualizar_base_de_dados import atualizar_base_de_dados
+from src.model.entrar_sspds import entrar_sspds
 
 # limpando o log
 with open("log.txt", "w") as file:
@@ -23,8 +23,12 @@ try:
     log.info("Inicio do programa")
     print("Inicio do programa")
     
+    navegador = webdriver.Chrome()
+
+    entrar_sspds(navegador)
+
     for relatorio in relatorios:
-        baixar_relatorios(relatorio)
+        baixar_relatorios(navegador, relatorio)
         
         df = transformar_relatorios_em_dataframes(relatorio)
 

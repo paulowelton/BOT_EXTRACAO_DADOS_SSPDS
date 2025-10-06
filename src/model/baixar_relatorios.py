@@ -8,17 +8,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
 import os
 
-def baixar_relatorios(relatorio):
-    try:
-        log.info("Entrando no sspds")
-        print("Entrando no sspds")
-
-        navegador = webdriver.Chrome()
-
-        # entrando no site do sspds
-        navegador.get("https://www.sspds.ce.gov.br/indicadores-de-seguranca-publica/")
-        navegador.maximize_window()     
-
+def baixar_relatorios(navegador, relatorio):
+    try: 
         container_relatorios = WebDriverWait(navegador, 180).until(EC.presence_of_element_located((By.XPATH, "/html/body/main/section/div/div/section[2]")))
         navegador.execute_script("arguments[0].scrollIntoView(true);", container_relatorios)
         

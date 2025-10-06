@@ -1,3 +1,4 @@
 relatorios = [
     'FURTO'
+    'CRIMES SEXUAIS'
 ]
