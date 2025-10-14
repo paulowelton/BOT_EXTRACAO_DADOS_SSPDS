@@ -1,4 +1,0 @@
-relatorios = [
-    'FURTO'
-    'CRIMES SEXUAIS'
-]

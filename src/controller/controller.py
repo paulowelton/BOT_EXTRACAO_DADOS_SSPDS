@@ -1,11 +1,9 @@
 import traceback
 import logging as log
-from selenium import webdriver
 
 from src.model.baixar_relatorios import baixar_relatorios
 from src.model.transformar_relatorios_em_dataframes import transformar_relatorios_em_dataframes
 from src.model.atualizar_base_de_dados import atualizar_base_de_dados
-from src.model.entrar_sspds import entrar_sspds
 
 # limpando o log
 with open("log.txt", "w") as file:
@@ -17,22 +15,17 @@ log.basicConfig(filename="log.txt",
                 format="%(asctime)s - %(levelname)s - %(message)s",
                 datefmt="%d/%m/%Y %I:%M:%S %p")
 
-from list_relatorios import relatorios
-
 try:
     log.info("Inicio do programa")
     print("Inicio do programa")
+
+    relatorios = baixar_relatorios()
     
-    navegador = webdriver.Chrome()
-
-    entrar_sspds(navegador)
-
     for relatorio in relatorios:
-        baixar_relatorios(navegador, relatorio)
         
         df = transformar_relatorios_em_dataframes(relatorio)
 
-        atualizar_base_de_dados(df)
+        atualizar_base_de_dados(df, relatorio)
     
 except:
     msg_erro = traceback.format_exc()

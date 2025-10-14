@@ -1,30 +1,35 @@
-05/10/2025 10:53:15 PM - INFO - Inicio do programa
-05/10/2025 10:53:15 PM - INFO - Entrando no sspds
-05/10/2025 10:53:19 PM - INFO - Transformando relatorio de FURTOCRIMES SEXUAIS em dataframe
-05/10/2025 10:53:19 PM - ERROR - Houve um erro na funcao de transformar relatorios em dfs: Traceback (most recent call last):
-  File "c:\Users\paulo\Documents\GitHub\BOT_EXTRACAO_DADOS_SSPDS\src\model\transformar_relatorios_em_dataframes.py", line 22, in transformar_relatorios_em_dataframes
-    dataframe = pd.read_excel(arquivo_xlsx)
-  File "C:\Users\paulo\AppData\Roaming\Python\Python313\site-packages\pandas\io\excel\_base.py", line 495, in read_excel
-    io = ExcelFile(
-        io,
-    ...<2 lines>...
-        engine_kwargs=engine_kwargs,
-    )
-  File "C:\Users\paulo\AppData\Roaming\Python\Python313\site-packages\pandas\io\excel\_base.py", line 1550, in __init__
-    ext = inspect_excel_format(
-        content_or_path=path_or_buffer, storage_options=storage_options
-    )
-  File "C:\Users\paulo\AppData\Roaming\Python\Python313\site-packages\pandas\io\excel\_base.py", line 1402, in inspect_excel_format
-    with get_handle(
-         ~~~~~~~~~~^
-        content_or_path, "rb", storage_options=storage_options, is_text=False
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    ) as handle:
-    ^
-  File "C:\Users\paulo\AppData\Roaming\Python\Python313\site-packages\pandas\io\common.py", line 882, in get_handle
-    handle = open(handle, ioargs.mode)
-FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\paulo\\Downloads\\Furtocrimes sexuais_2009-a-2024.xlsx'
-
-05/10/2025 10:53:19 PM - INFO - atualizando planilha online
-05/10/2025 10:54:12 PM - INFO - planilha online atualizada
-05/10/2025 10:54:12 PM - INFO - Final do programa
+13/10/2025 12:05:26 PM - INFO - Inicio do programa
+13/10/2025 12:05:26 PM - INFO - Entrando no sspds
+13/10/2025 12:05:29 PM - INFO - Baixando relatorio de FURTO
+13/10/2025 12:05:30 PM - INFO - Baixando relatorio de CRIMES SEXUAIS
+13/10/2025 12:05:30 PM - INFO - Baixando relatorio de LEI 11.340/06 (LEI MARIA DA PENHA)
+13/10/2025 12:05:30 PM - INFO - Baixando relatorio de HOMOFOBIA E TRANSFOBIA
+13/10/2025 12:05:30 PM - INFO - Baixando relatorio de CRIME OU PRECONCEITO DE RAÇA OU DE COR
+13/10/2025 12:05:30 PM - INFO - Baixando relatorio de CRIMES VIOLENTOS LETAIS E INTENCIONAIS – CVLI
+13/10/2025 12:05:31 PM - INFO - Baixando relatorio de CRIMES VIOLENTOS CONTRA O PATRIMÔNIO – CVP
+13/10/2025 12:05:31 PM - INFO - Baixando relatorio de INDÍGENAS VÍTIMAS DE CRIMES
+13/10/2025 12:05:33 PM - INFO - Transformando relatorio de Furto_2009-a-2024.xlsx em dataframe
+13/10/2025 12:05:56 PM - INFO - atualizando planilha online
+13/10/2025 12:06:59 PM - INFO - planilha online atualizada
+13/10/2025 12:06:59 PM - INFO - Transformando relatorio de Crimes-Sexuais_2009-a-2024.xlsx em dataframe
+13/10/2025 12:07:01 PM - INFO - atualizando planilha online
+13/10/2025 12:07:12 PM - INFO - planilha online atualizada
+13/10/2025 12:07:12 PM - INFO - Transformando relatorio de Lei-Maria-da-Penha_2012-a-2024.xlsx em dataframe
+13/10/2025 12:07:21 PM - INFO - atualizando planilha online
+13/10/2025 12:08:04 PM - INFO - planilha online atualizada
+13/10/2025 12:08:04 PM - INFO - Transformando relatorio de Homofobia-e-Transfobia_2021-a-2024.xlsx em dataframe
+13/10/2025 12:08:04 PM - INFO - atualizando planilha online
+13/10/2025 12:08:09 PM - INFO - planilha online atualizada
+13/10/2025 12:08:09 PM - INFO - Transformando relatorio de Crime-ou-Preconceito-de-Raca-ou-de-Cor_2011-a-2024.xlsx em dataframe
+13/10/2025 12:08:09 PM - INFO - atualizando planilha online
+13/10/2025 12:08:17 PM - INFO - planilha online atualizada
+13/10/2025 12:08:17 PM - INFO - Transformando relatorio de CVLI_2009-2024.xlsx em dataframe
+13/10/2025 12:08:20 PM - INFO - atualizando planilha online
+13/10/2025 12:08:30 PM - INFO - planilha online atualizada
+13/10/2025 12:08:30 PM - INFO - Transformando relatorio de CVP_2009-a-2024.xlsx em dataframe
+13/10/2025 12:08:53 PM - INFO - atualizando planilha online
+13/10/2025 12:09:52 PM - INFO - planilha online atualizada
+13/10/2025 12:09:52 PM - INFO - Transformando relatorio de Indigenas_2009-a-2024.xlsx em dataframe
+13/10/2025 12:09:52 PM - INFO - atualizando planilha online
+13/10/2025 12:09:56 PM - INFO - planilha online atualizada
+13/10/2025 12:09:56 PM - INFO - Final do programa

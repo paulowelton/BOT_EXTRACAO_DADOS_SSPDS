@@ -4,20 +4,15 @@ import pandas as pd
 import logging as log
 from datetime import datetime
 
-# from  list_relatorios import relatorios
-
-relatorios = [
-    'FURTO'
-]
-
 def transformar_relatorios_em_dataframes(relatorio):
     
     try:
         
         log.info(f"Transformando relatorio de {relatorio} em dataframe")
         print(f"Transformando relatorio de {relatorio} em dataframe")
-            
-        arquivo_xlsx = f"C:\\Users\\{os.getlogin()}\\Downloads\\{relatorio.capitalize()}_2009-a-2024.xlsx"
+        
+        
+        arquivo_xlsx = f"C:\\Users\\{os.getlogin()}\\Downloads\\{relatorio}"
 
         dataframe = pd.read_excel(arquivo_xlsx)
 
@@ -27,7 +22,9 @@ def transformar_relatorios_em_dataframes(relatorio):
 
         dataframe = dataframe[dataframe['Data'] > data_minima]   
 
-        dataframe['Tipo'] = relatorio.capitalize()
+        tipo = str(relatorio.split('_')[0]).replace('-', ' ')
+        
+        dataframe['Tipo'] = tipo
 
         return dataframe
             
